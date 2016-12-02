@@ -1,0 +1,30 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #2a3540;
+}
+html .nav,
+body .nav {
+  margin-bottom: 20px;
+  background: #e4e4e4;
+  width: 100%;
+}
+html .nav .navContent,
+body .nav .navContent {
+  margin: 0;
+  text-align: center;
+}
+html .nav .navContent .navLink,
+body .nav .navContent .navLink {
+  display: inline-block;
+  list-style: none;
+}
+html .nav .navContent .navLink a,
+body .nav .navContent .navLink a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 25px;
+  display: block;
+}

@@ -1,0 +1,175 @@
+.playerSearch {
+    text-align: center;
+    margin-bottom: 30px;
+    .playerSearchBar {
+        width: 350px;
+        background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+    }
+}
+
+.grid {
+    padding: 0 30px;
+}
+
+/* clearfix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item-1 {
+    width: 230px;
+    height: 320px;
+}
+
+.grid-item {
+    float: left;
+    background: #e4e4e4;
+    border: 1px solid #333;
+    border-color: hsla(0, 0%, 0%, 0.5);
+    border-radius: 5px;
+
+    .listLink {
+        text-decoration: none;
+    }
+
+    .playerImage {
+        img {
+          width: 230px;
+          height: 230px;
+          border-radius: 5px;
+        }
+    } 
+
+    .headerText {
+        font-family: 'Dosis', sans-serif;
+        font-size: 28px;
+        color: #000;
+    }
+
+    .playerImage, .headerText {
+        text-align: center;
+    } 
+
+    .playerInformation {
+        width: 100%;
+        display: table;
+
+        .left {
+            float: left;
+            margin-left: 5px;
+        }
+
+        .right {
+            float: right;
+            margin-right: 5px;
+        }
+        .left, .right {
+            font-size: 14px;
+        }
+        p {
+            margin: 0;
+            padding: 10px 0;
+        }
+    }
+    .playerInformation:nth-child(odd) {
+        background-color: #cccccc;
+    }
+    tbody {
+        .heroCategoryHero {
+           width: 71px;
+        }
+        .heroCategoryStatus {
+           width: 140px;
+        }
+        .heroCategoryKillRatio {
+           width: 89px;
+        }
+        .heroCategoryNetworth {
+           width: 95px;
+        }
+        .heroCategoryTime {
+           width: 75px;
+        }
+        tr {
+            .won {
+                color: #44b863;
+            }
+            .lost {
+                color: #d13232;
+            }
+            td {
+                text-align: center;
+                font-family: 'Fira Sans', sans-serif;
+                font-weight: 600;
+
+                img {
+                    width: 60px;
+                    display: block;
+                    float: left;
+                    margin-left: 5px;
+                }
+
+                p {
+                    margin: 0;
+                    padding-top: 6px;
+                }
+            }
+            th, td {
+                height: 45px;
+            }
+        }
+        tr:nth-child(even) {
+            background-color: #cccccc;
+        }
+        .latestMatchResult:hover {
+            background-color: #f1f1f1;
+        }
+    }
+    .headerText {
+        margin-top: 12px;
+    }
+    .listContent {
+        height: 497px;
+        padding: 0 10px;
+        overflow: scroll;
+        .list {
+            margin-bottom: 40px;
+            list-style: none;
+            .listLink {
+                text-decoration: none;
+                color: #000;
+                .listText {
+                   margin-bottom: 10px;
+                   font-weight: bold;
+                }
+                .underListText {
+                    color: #8e8e8e;
+                    font-size: 12px;
+                }
+                span {
+                    font-family: 'Fira Sans', sans-serif;
+                }
+            }        
+        }
+    }
+    .list:hover {
+        .listText {
+            color: #c73737;
+        }
+    }
+    .twitterContent {
+        height: 570px;
+        overflow: scroll;
+    }
+}
+
+.space {
+    margin: 0 20px 20px 0;
+}

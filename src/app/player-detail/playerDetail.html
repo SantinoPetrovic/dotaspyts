@@ -1,0 +1,289 @@
+<div *ngFor="let player of players">
+	<div *ngIf="player.id == productID">
+		<div class="grid">
+			<div class="grid-item grid-item-5 space">
+				<div class="playerImage">
+					<img src="./data/images/players/{{player.details_image_url}}">
+				</div>
+				<h1 class="headerText">{{player.nickname}}</h1>
+				<div class="playerInformation">
+					<p class="left">Name:</p> <p class="right">Clement Ivanov</p>
+				</div>
+				<div class="playerInformation">
+					<p class="left">Non Romanized Name:</p> <p class="right">Clement Ivanov</p>
+				</div>
+				<div class="playerInformation">
+					<p class="left">Team:</p> <p class="right">Team Secret</p>
+				</div>
+				<div class="playerInformation">
+					<p class="left">Country:</p> <p class="right">Estonia</p>
+				</div>
+				<div class="playerInformation">
+					<p class="left">Birthday:</p> <p class="right">1992/10/04</p>
+				</div>
+<!-- 				<div class="playerInformation">
+					<p class="left">Role(s):</p> <p class="right">Offlaner</p>
+				</div>
+				<div class="playerInformation">
+					<p class="left">Signature Hero:</p> <p class="right">Nature's Prophet</p>
+				</div>
+				<div class="playerInformation">
+					<p class="left">Solo MMR:</p> <p class="right">7594 (last update: 2016-08-31)</p>
+				</div> -->				
+			</div>
+			<div class="grid-item grid-item-2 space">
+				<h1 class="headerText">Latest matches</h1>
+				<tbody>
+					<tr>
+						<th class="heroCategoryHero">Hero</th>
+						<th class="heroCategoryStatus">Won/Lost match</th>
+						<th class="heroCategoryKillRatio">K/D/A</th>
+						<th class="heroCategoryNetworth">Networth</th>
+						<th class="heroCategoryTime">Duration</th>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="won">Won Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="lost">Lost Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="lost">Lost Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="won">Won Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="won">Won Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="won">Won Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="lost">Lost Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="lost">Lost Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="won">Won Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+					<tr class="latestMatchResult">
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td class="won">Won Match</td>
+						<td>01/10/11</td>
+						<td>13245</td>
+						<td>57:30</td>
+					</tr>
+				</tbody>
+			</div>
+			<div class="grid-item grid-item-1 space">
+				<div class="fb-page" data-href="https://www.facebook.com/OfficialPuppey" data-tabs="timeline" data-height="570" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/OfficialPuppey" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/OfficialPuppey">Puppey's Facebook</a></blockquote></div>
+			</div>
+			<div class="grid-item grid-item-1 space">
+			<h1 class="headerText">Reddit</h1>
+			<ul class="listContent">
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+			</div>
+			<div class="grid-item grid-item-1 space">
+			<h1 class="headerText">Gosugamers</h1>
+			<ul class="listContent">
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="list">
+					<a class="listLink" href="/">
+						<div class="listText">
+							<span>
+								Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							</span>
+						</div>
+						<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+			</div>
+			<div class="grid-item grid-item-2 space">
+				<h1 class="headerText">Twitch</h1>
+				<iframe src="https://player.twitch.tv/?channel=dreamleague" frameborder="0" scrolling="no" height="400" width="471"></iframe><a href="https://www.twitch.tv/dreamleague?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;"></a>
+			</div>
+			<div class="grid-item grid-item-1 space">
+				<h1 class="headerText">Twitch Chat</h1>
+				<iframe src="https://www.twitch.tv/dreamleague/chat?popout=" frameborder="0" scrolling="no" height="500" width="300"></iframe>
+			</div>
+			<div class="grid-item grid-item-1 space">
+				<div class="twitterContent">
+					<a class="twitter-timeline" href="https://twitter.com/CLEMENTINATOR">Tweets by CLEMENTINATOR</a> 
+				</div>
+ 			</div>
+
+			<div class="grid-item grid-item-1 space">
+				<h1 class="headerText">Tournaments</h1>
+				
+			</div>
+		</div>
+	</div>
+</div>

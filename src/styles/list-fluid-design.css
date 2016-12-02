@@ -1,0 +1,155 @@
+.playerSearch {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.playerSearch .playerSearchBar {
+  width: 350px;
+  background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
+.grid {
+  padding: 0 30px;
+}
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* ---- grid-item ---- */
+.grid-sizer,
+.grid-item-1 {
+  width: 230px;
+  height: 320px;
+}
+.grid-item {
+  float: left;
+  background: #e4e4e4;
+  border: 1px solid #333;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.grid-item .listLink {
+  text-decoration: none;
+}
+.grid-item .playerImage img {
+  width: 230px;
+  height: 230px;
+  border-radius: 5px;
+}
+.grid-item .headerText {
+  font-family: 'Dosis', sans-serif;
+  font-size: 28px;
+  color: #000;
+}
+.grid-item .playerImage,
+.grid-item .headerText {
+  text-align: center;
+}
+.grid-item .playerInformation {
+  width: 100%;
+  display: table;
+}
+.grid-item .playerInformation .left {
+  float: left;
+  margin-left: 5px;
+}
+.grid-item .playerInformation .right {
+  float: right;
+  margin-right: 5px;
+}
+.grid-item .playerInformation .left,
+.grid-item .playerInformation .right {
+  font-size: 14px;
+}
+.grid-item .playerInformation p {
+  margin: 0;
+  padding: 10px 0;
+}
+.grid-item .playerInformation:nth-child(odd) {
+  background-color: #cccccc;
+}
+.grid-item tbody .heroCategoryHero {
+  width: 71px;
+}
+.grid-item tbody .heroCategoryStatus {
+  width: 140px;
+}
+.grid-item tbody .heroCategoryKillRatio {
+  width: 89px;
+}
+.grid-item tbody .heroCategoryNetworth {
+  width: 95px;
+}
+.grid-item tbody .heroCategoryTime {
+  width: 75px;
+}
+.grid-item tbody tr .won {
+  color: #44b863;
+}
+.grid-item tbody tr .lost {
+  color: #d13232;
+}
+.grid-item tbody tr td {
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+}
+.grid-item tbody tr td img {
+  width: 60px;
+  display: block;
+  float: left;
+  margin-left: 5px;
+}
+.grid-item tbody tr td p {
+  margin: 0;
+  padding-top: 6px;
+}
+.grid-item tbody tr th,
+.grid-item tbody tr td {
+  height: 45px;
+}
+.grid-item tbody tr:nth-child(even) {
+  background-color: #cccccc;
+}
+.grid-item tbody .latestMatchResult:hover {
+  background-color: #f1f1f1;
+}
+.grid-item .headerText {
+  margin-top: 12px;
+}
+.grid-item .listContent {
+  height: 497px;
+  padding: 0 10px;
+  overflow: scroll;
+}
+.grid-item .listContent .list {
+  margin-bottom: 40px;
+  list-style: none;
+}
+.grid-item .listContent .list .listLink {
+  text-decoration: none;
+  color: #000;
+}
+.grid-item .listContent .list .listLink .listText {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.grid-item .listContent .list .listLink .underListText {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+.grid-item .listContent .list .listLink span {
+  font-family: 'Fira Sans', sans-serif;
+}
+.grid-item .list:hover .listText {
+  color: #c73737;
+}
+.grid-item .twitterContent {
+  height: 570px;
+  overflow: scroll;
+}
+.space {
+  margin: 0 20px 20px 0;
+}

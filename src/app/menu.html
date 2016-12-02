@@ -1,0 +1,27 @@
+    <nav class="nav">
+      <ul class="navContent">
+        <li class="navLink">
+          <a [routerLink]=" ['./'] ">
+            Home
+          </a>
+        </li>
+        <li class="navLink">
+          <a [routerLink]=" ['./player'] ">
+            Player
+          </a>
+        </li>
+        <li class="navLink">
+          <a [routerLink]=" ['./detail'] ">
+            Detail
+          </a>
+        </li>
+        <li class="navLink">
+          <a [routerLink]=" ['./about'] ">
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
