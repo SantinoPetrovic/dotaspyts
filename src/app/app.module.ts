@@ -21,6 +21,7 @@ import { PlayerListComponent } from './player-list';
 import { PlayerCreatorComponent } from './player-creator';
 import { PlayerDetailComponent } from './player-detail';
 import { NoContentComponent } from './no-content';
+import { SearchPipe } from './search.pipe';
 import { XLarge } from './home/x-large';
 
 // Application wide providers
@@ -49,6 +50,7 @@ type StoreType = {
     PlayerCreatorComponent,
     PlayerDetailComponent,
     NoContentComponent,
+    SearchPipe,
     XLarge
   ],
   imports: [ // import Angular's modules

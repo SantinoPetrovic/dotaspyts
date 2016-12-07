@@ -24,6 +24,7 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
+  public data: Array<any> =[];
   // Set our default values
   localState = { value: '' };
   // TypeScript public modifiers
@@ -33,7 +34,8 @@ export class HomeComponent {
 
   ngOnInit() {
     console.log('hello `Home` component');
-    this.player.getPlayers().subscribe(players => this.players = players);
+    this.player.getPlayers().subscribe(players => { this.players = players; [].push.apply(this.data, players); });
+    console.log(this.data);
   }
 
   submitState(value: string) {
