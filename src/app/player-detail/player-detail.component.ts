@@ -21,7 +21,6 @@ export class PlayerDetailComponent {
   productID: string;
   constructor(public appState: AppState, public media: Media, public route: ActivatedRoute) {
     this.productID = route.snapshot.params['id'];
-    console.log(this.productID);
   }
   ngOnInit() {
     console.log('hello `Detail` component');

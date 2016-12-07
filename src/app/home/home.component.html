@@ -2,7 +2,7 @@
 	<input type="text" class="playerSearchBar" placeholder="Search.." name="search">
 </div>
 <div class="grid">
-	<div class="grid-item grid-item-1 space" *ngFor="let player of players | async | search">
+<!-- 	<div class="grid-item grid-item-1 space" *ngFor="let player of players">
 	<a class="listLink" href="/#/creator/{{player.id}}">
 		<div class="playerImage">
 			<img src="./data/images/players/{{player.list_image_url}}">
@@ -41,5 +41,6 @@
 		</div>
 		<h1 class="headerText">{{player.nickname}}</h1>
 	</a>
-	</div>		
+	</div>	 -->
+	<li *ngFor="let player of PlayerModels">{{player.nickname}}</li>	
 </div>

@@ -8,6 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Player } from './player';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+class PlayerModel {
+  constructor(public nickname: string) {}  
+}
 @Component({
   // The selector is what angular internally uses
   // for `document.querySelectorAll(selector)` in our index.html
@@ -28,6 +31,9 @@ export class HomeComponent {
   // Set our default values
   localState = { value: '' };
   // TypeScript public modifiers
+  PlayerModels = [
+    new PlayerModel('sleep')
+  ]
   constructor(public appState: AppState, public title: Title, public player: Player) {
 
   }
@@ -36,6 +42,7 @@ export class HomeComponent {
     console.log('hello `Home` component');
     this.player.getPlayers().subscribe(players => { this.players = players; [].push.apply(this.data, players); });
     console.log(this.data);
+    const HEROES = this.player.getPlayers().subscribe(players => { this.players = players; [].push.apply(this.data, players); });
   }
 
   submitState(value: string) {
