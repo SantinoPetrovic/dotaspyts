@@ -28,9 +28,7 @@ class PlayerModel {
 })
 export class HomeComponent {
   public data: Array<any> =[];
-  // Set our default values
   localState = { value: '' };
-  // TypeScript public modifiers
   PlayerModels = [
     new PlayerModel('sleep')
   ]
@@ -40,9 +38,17 @@ export class HomeComponent {
 
   ngOnInit() {
     console.log('hello `Home` component');
-    this.player.getPlayers().subscribe(players => { this.players = players; [].push.apply(this.data, players); });
-    console.log(this.data);
-    const HEROES = this.player.getPlayers().subscribe(players => { this.players = players; [].push.apply(this.data, players); });
+    this.player.getPlayers().subscribe(players => { 
+      this.players = players; 
+      [].push.apply(this.data, players);
+    });
+    /*console.log(this.data.length);*/
+/*    for (var key in this.data) {
+       var arr = data[key];
+    }*/
+  }
+
+  ngOnDestroy() {
   }
 
   submitState(value: string) {

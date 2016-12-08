@@ -6,6 +6,6 @@ import {Pipe} from "@angular/core";
 
 export class SearchPipe {
 	transform(value) {
-		return value.filter((data)=> data.nickname.startsWith('S'));
+		return value.filter((player)=> PlayerModels.nickname.startsWith('s'));
 	}
 }
