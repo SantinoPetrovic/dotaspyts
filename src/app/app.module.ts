@@ -21,6 +21,8 @@ import { PlayerListComponent } from './player-list';
 import { PlayerCreatorComponent } from './player-creator';
 import { PlayerDetailComponent } from './player-detail';
 import { NoContentComponent } from './no-content';
+import { SearchBox } from './search-box';
+import { PlayerBoxComponent } from './player-box';
 import { SearchPipe } from './search.pipe';
 import { XLarge } from './home/x-large';
 
@@ -50,6 +52,8 @@ type StoreType = {
     PlayerCreatorComponent,
     PlayerDetailComponent,
     NoContentComponent,
+    SearchBox,
+    PlayerBoxComponent,
     SearchPipe,
     XLarge
   ],

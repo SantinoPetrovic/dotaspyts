@@ -1,0 +1,10 @@
+<div class="grid">
+	<div class="grid-item grid-item-1 space" *ngFor="let item of this.data | search : 'S'">
+		<a class="listLink" href="/#/creator/{{item.id}}">
+			<div class="playerImage">
+				<img src="./data/images/players/{{item.list_image_url}}">
+			</div>
+			<h1 class="headerText">{{item.nickname}}</h1>
+		</a>
+	</div>
+</div>
