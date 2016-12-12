@@ -5,7 +5,6 @@ import { Title } from './title';
 import { XLarge } from './x-large';
 import { Pipe, PipeTransform } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Player } from './player';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 class PlayerModel {
@@ -18,8 +17,7 @@ class PlayerModel {
   selector: 'home',  // <home></home>
   // We need to tell Angular's Dependency Injection which providers are in our app.
   providers: [
-    Title,
-    Player
+    Title
   ],
   // Our list of styles in our component. We may add more to compose many styles together
   styleUrls: [ '../../styles/list-fluid-design.css' ],
@@ -32,20 +30,12 @@ export class HomeComponent {
   PlayerModels = [
     new PlayerModel('sleep')
   ]
-  constructor(public appState: AppState, public title: Title, public player: Player) {
+  constructor(public appState: AppState, public title: Title) {
 
   }
 
   ngOnInit() {
     console.log('hello `Home` component');
-    this.player.getPlayers().subscribe(players => { 
-      this.players = players; 
-      [].push.apply(this.data, players);
-    });
-    /*console.log(this.data.length);*/
-/*    for (var key in this.data) {
-       var arr = data[key];
-    }*/
   }
 
   ngOnDestroy() {

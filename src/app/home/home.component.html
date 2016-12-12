@@ -1,2 +1,2 @@
-<search-box></search-box>
-<player-box></player-box>
+<search-box (update)="term = $event"></search-box>
+<player-box [term]="term"></player-box>
