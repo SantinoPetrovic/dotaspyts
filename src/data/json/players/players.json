@@ -2,12 +2,12 @@
 	{
 		"id": 1,
 		"nickname": "Puppey",
-		"twitter-id": "CLEMENTINATOR",
-		"facebook-id": "OfficialPuppey",
-		"twitch-id": "puppey",
-		"steam-id": "76561198047544485",
-		"dota-id": "87278757",
-		"wiki-url": "http://wiki.teamliquid.net/dota2/Puppey",
+		"twitter_id": "CLEMENTINATOR",
+		"facebook_id": "OfficialPuppey",
+		"twitch_id": "puppey",
+		"steam_id": "76561198047544485",
+		"dota_id": "87278757",
+		"wiki_url": "http://wiki.teamliquid.net/dota2/Puppey",
 		"details_image_url": "puppey.jpg",
 		"list_image_url": "puppey.png"
 
@@ -15,12 +15,12 @@
 	{
 		"id": 2,
 		"nickname": "SingSing",
-		"twitter-id": "Sing2X",
-		"facebook-id": "SingSinggg",
-		"twitch-id": "sing_sing",
-		"steam-id": "76561197980022982",
-		"dota-id": "19757254",
-		"wiki-url": "http://wiki.teamliquid.net/dota2/SingSing",
+		"twitter_id": "Sing2X",
+		"facebook_id": "SingSinggg",
+		"twitch_id": "sing_sing",
+		"steam_id": "76561197980022982",
+		"dota_id": "19757254",
+		"wiki_url": "http://wiki.teamliquid.net/dota2/SingSing",
 		"details_image_url": "singsing.jpg",
 		"list_image_url": "singsing.png"
 	}

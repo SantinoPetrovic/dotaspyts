@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-import { Pipe, PipeTransform } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { AppState } from '../app.service';
 import { Media } from './media';
+import { Pipe, PipeTransform } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-
-console.log('`PlayerDetail`');
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'playerDetail',
@@ -17,14 +16,30 @@ console.log('`PlayerDetail`');
   templateUrl: './playerDetail.html'
 })
 export class PlayerDetailComponent {
+  public data: Array<any> =[];
   localState = { value: '' };
   productID: string;
-  constructor(public appState: AppState, public media: Media, public route: ActivatedRoute) {
+  trustedDashboardUrl : SafeUrl;
+  constructor(public appState: AppState, public media: Media, public route: ActivatedRoute, private sanitizer: DomSanitizer) {
     this.productID = route.snapshot.params['id'];
   }
   ngOnInit() {
     console.log('hello `Detail` component');
-    this.media.getPlayers().subscribe(players => this.players = players);
+/*    this.media.getPlayers().subscribe(players => this.players = players);*/
+    this.media.getPlayers().subscribe(players => { 
+      this.players = players; 
+      [].push.apply(this.data, players);
+      for (var i in this.data) {
+      var obj = this.data[i]["id"];
+      if(this.productID == obj) {
+        var twitchChatData = "https://www.twitch.tv/"+this.data[i]["twitch_id"]+"/chat?popout=";
+        var twitchVideoData = "https://player.twitch.tv/?channel="+this.data[i]["twitch_id"];
+        this.twitchChatUrl = this.sanitizer.bypassSecurityTrustResourceUrl(twitchChatData);
+        this.twitchVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(twitchVideoData);
+      }
+      // ...
+      }
+    });
   }
   ngAfterViewInit () {
           !function(d,s,id){

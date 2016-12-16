@@ -7,6 +7,6 @@ import {Pipe, PipeTransform} from "@angular/core";
 
 export class SearchPipe implements PipeTransform {
 	transform(value, [term]) {
-		return value.filter((item)=> item.nickname.startsWith(term));
+		return value.filter((item)=> item.nickname.match(term));
 	}
 }

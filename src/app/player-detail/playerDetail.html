@@ -1,4 +1,4 @@
-<div *ngFor="let player of players">
+<div *ngFor="let player of this.data">
 	<div *ngIf="player.id == productID">
 		<div class="grid">
 			<div class="grid-item grid-item-5 space">
@@ -114,7 +114,7 @@
 				</tbody>
 			</div>
 			<div class="grid-item grid-item-1 space">
-				<div class="fb-page" data-href="https://www.facebook.com/OfficialPuppey" data-tabs="timeline" data-height="570" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/OfficialPuppey" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/OfficialPuppey">Puppey's Facebook</a></blockquote></div>
+				<div class="fb-page" data-href="https://www.facebook.com/OfficialPuppey" data-tabs="timeline" data-height="570" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/OfficialPuppey" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/{{player.facebook_id}}">Puppey's Facebook</a></blockquote></div>
 			</div>
 			<div class="grid-item grid-item-1 space">
 			<h1 class="headerText">Reddit</h1>
@@ -268,15 +268,15 @@
 			</div>
 			<div class="grid-item grid-item-2 space">
 				<h1 class="headerText">Twitch</h1>
-				<iframe src="https://player.twitch.tv/?channel=dreamleague" frameborder="0" scrolling="no" height="400" width="471"></iframe><a href="https://www.twitch.tv/dreamleague?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;"></a>
+				<iframe [src]="this.twitchVideoUrl" frameborder="0" scrolling="no" height="400" width="471"></iframe><a href="https://www.twitch.tv/sing_sing?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;"></a>
 			</div>
 			<div class="grid-item grid-item-1 space">
 				<h1 class="headerText">Twitch Chat</h1>
-				<iframe src="https://www.twitch.tv/dreamleague/chat?popout=" frameborder="0" scrolling="no" height="500" width="300"></iframe>
+				<iframe [src]="this.twitchChatUrl" frameborder="0" scrolling="no" height="500" width="300"></iframe>
 			</div>
 			<div class="grid-item grid-item-1 space">
 				<div class="twitterContent">
-					<a class="twitter-timeline" href="https://twitter.com/CLEMENTINATOR">Tweets by CLEMENTINATOR</a> 
+					<a class="twitter-timeline" href="https://twitter.com/{{player.twitter_id}}">Tweets by {{player.twitter_id}}</a> 
 				</div>
  			</div>
 
