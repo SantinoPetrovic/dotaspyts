@@ -34,6 +34,7 @@ export class PlayerDetailComponent {
       if(this.productID == obj) {
         var twitchChatData = "https://www.twitch.tv/"+this.data[i]["twitch_id"]+"/chat?popout=";
         var twitchVideoData = "https://player.twitch.tv/?channel="+this.data[i]["twitch_id"];
+        this.facebookTimelineUrl = "https://www.facebook.com/"+this.data[i]["facebook_id"];
         this.twitchChatUrl = this.sanitizer.bypassSecurityTrustResourceUrl(twitchChatData);
         this.twitchVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(twitchVideoData);
       }

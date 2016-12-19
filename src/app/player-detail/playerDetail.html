@@ -1,5 +1,6 @@
 <div *ngFor="let player of this.data">
 	<div *ngIf="player.id == productID">
+		<!-- <a [href]="this.facebookTimelineUrl">Facebook</a> -->
 		<div class="grid">
 			<div class="grid-item grid-item-5 space">
 				<div class="playerImage">
@@ -105,7 +106,7 @@
 						<td>57:30</td>
 					</tr>
 					<tr class="latestMatchResult">
-						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
+						<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png" [attr.data-href]="facebookData"></td>
 						<td class="won">Won Match</td>
 						<td>01/10/11</td>
 						<td>13245</td>
@@ -114,7 +115,11 @@
 				</tbody>
 			</div>
 			<div class="grid-item grid-item-1 space">
-				<div class="fb-page" data-href="https://www.facebook.com/OfficialPuppey" data-tabs="timeline" data-height="570" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/OfficialPuppey" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/{{player.facebook_id}}">Puppey's Facebook</a></blockquote></div>
+				<div class="fb-page" [attr.data-href]="this.facebookTimelineUrl" data-tabs="timeline" data-height="570" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+					<blockquote [attr.cite]="this.facebookTimelineUrl" class="fb-xfbml-parse-ignore">
+						<a href="https://www.facebook.com/{{player.facebook_id}}">Puppey's Facebook</a>
+					</blockquote>
+				</div>
 			</div>
 			<div class="grid-item grid-item-1 space">
 			<h1 class="headerText">Reddit</h1>
