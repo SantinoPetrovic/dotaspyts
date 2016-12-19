@@ -17,6 +17,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 })
 export class PlayerDetailComponent {
   public data: Array<any> =[];
+  public wikiData: Array<any> =[];
   localState = { value: '' };
   productID: string;
   trustedDashboardUrl : SafeUrl;
@@ -39,6 +40,17 @@ export class PlayerDetailComponent {
         this.twitchVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(twitchVideoData);
       }
       // ...
+      }
+    });
+
+    this.media.getWiki().subscribe(wikis => { 
+      this.wikis = wikis; 
+      [].push.apply(this.wikiData, wikis);
+      for (var i in this.wikiData) {
+      var obj = this.wikiData[i]["id"];
+        if(this.productID == obj) {
+          console.log("true!!!!");
+        }
       }
     });
   }

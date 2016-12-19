@@ -37,4 +37,9 @@ export class Media {
     return this.http.get('./data/json/players/players.json')
             .map(res => res.json());
     }
+
+    getWiki() {
+    return this.http.get('./data/json/wiki/teamliquid.json')
+            .map(res => res.json());
+    }
 }

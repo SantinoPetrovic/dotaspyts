@@ -1,0 +1,18 @@
+[
+	{
+		"id": 1,
+		"name": "Clement Ivanov",
+		"non_romanized_name": "Clement Ivanov",
+		"team:": "Team Secret",
+		"country": "Estonia",
+		"birth_date": "1992/10/04"
+	},
+	{
+		"id": 2,
+		"name": "Clement Ivanov",
+		"non_romanized_name": "Clement Ivanov",
+		"team:": "Team Secret",
+		"country": "Estonia",
+		"birth_date": "1992/10/04"
+	}
+]
