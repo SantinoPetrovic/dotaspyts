@@ -25,7 +25,7 @@ import { NoContentComponent } from './no-content';
 import { SearchBox } from './search-box';
 import { PlayerBoxComponent } from './player-box';
 import { SearchPipe } from './search.pipe';
-import { FilterPipe } from './filter.pipe';
+import { PlayerFilterPipe } from './filter.pipe';
 import { XLarge } from './home/x-large';
 
 // Application wide providers
@@ -57,7 +57,7 @@ type StoreType = {
     SearchBox,
     PlayerBoxComponent,
     SearchPipe,
-    FilterPipe,
+    PlayerFilterPipe,
     XLarge
   ],
   imports: [ // import Angular's modules

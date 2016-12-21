@@ -3,16 +3,16 @@
 		"id": 1,
 		"name": "Clement Ivanov",
 		"non_romanized_name": "Clement Ivanov",
-		"team:": "Team Secret",
+		"team": "Team Secret",
 		"country": "Estonia",
 		"birth_date": "1992/10/04"
 	},
 	{
 		"id": 2,
-		"name": "Clement Ivanov",
-		"non_romanized_name": "Clement Ivanov",
-		"team:": "Team Secret",
-		"country": "Estonia",
-		"birth_date": "1992/10/04"
+		"name": "WehSing Yuen",
+		"non_romanized_name": "WehSing Yuen",
+		"team": "none",
+		"country": "Netherlands",
+		"birth_date": "1991/06/19"
 	}
 ]

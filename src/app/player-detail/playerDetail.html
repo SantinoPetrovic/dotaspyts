@@ -1,24 +1,24 @@
 <div *ngFor="let player of this.data | filter: productID">
-	<div class="grid">
+	<div *ngFor="let wiki of this.wikiData | filter: productID" class="grid">
 		<div class="grid-item grid-item-5 space">
 			<div class="playerImage">
 				<img src="./data/images/players/{{player.details_image_url}}">
 			</div>
 			<h1 class="headerText">{{player.nickname}}</h1>
 			<div class="playerInformation">
-				<p class="left">Name:</p> <p class="right">Clement Ivanov</p>
+				<p class="left">Name:</p> <p class="right">{{wiki.name}}</p>
 			</div>
 			<div class="playerInformation">
-				<p class="left">Non Romanized Name:</p> <p class="right">Clement Ivanov</p>
+				<p class="left">Non Romanized Name:</p> <p class="right">{{wiki.non_romanized_name}}</p>
 			</div>
 			<div class="playerInformation">
-				<p class="left">Team:</p> <p class="right">Team Secret</p>
+				<p class="left">Team:</p> <p class="right">{{wiki.team}}</p>
 			</div>
 			<div class="playerInformation">
-				<p class="left">Country:</p> <p class="right">Estonia</p>
+				<p class="left">Country:</p> <p class="right">{{wiki.country}}</p>
 			</div>
 			<div class="playerInformation">
-				<p class="left">Birthday:</p> <p class="right">1992/10/04</p>
+				<p class="left">Birthday:</p> <p class="right">{{wiki.birth_date}}</p>
 			</div>
 <!-- 				<div class="playerInformation">
 				<p class="left">Role(s):</p> <p class="right">Offlaner</p>
