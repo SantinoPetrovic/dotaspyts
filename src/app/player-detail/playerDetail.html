@@ -40,75 +40,15 @@
 					<th class="heroCategoryNetworth">Networth</th>
 					<th class="heroCategoryTime">Duration</th>
 				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="won">Won Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="lost">Lost Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="lost">Lost Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="won">Won Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="won">Won Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="won">Won Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="lost">Lost Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="lost">Lost Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png"></td>
-					<td class="won">Won Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
-				</tr>
-				<tr class="latestMatchResult">
-					<td><img class="heroImage" src="./data/images/heroes_images_small/npc_dota_hero_abaddon.png" [attr.data-href]="facebookData"></td>
-					<td class="won">Won Match</td>
-					<td>01/10/11</td>
-					<td>13245</td>
-					<td>57:30</td>
+				<tr *ngFor="let match of this.matchesData | filter: productID" class="latestMatchResult">
+					<td><img class="heroImage" src="./data/images/heroes_images_small/{{match.hero}}.png" title="{{match.localized_hero}}"></td>
+					<td *ngIf=" match.radiant_win == 'true' && match.team == 'Radiant' " class="won">Won Match</td>
+					<td *ngIf=" match.radiant_win == 'false' && match.team == 'Dire' " class="won">Won Match</td>
+					<td *ngIf=" match.radiant_win == 'true' && match.team == 'Dire' " class="lost">Lost Match</td>
+					<td *ngIf=" match.radiant_win == 'false' && match.team == 'Radiant' " class="lost">Lost Match</td>
+					<td>{{match.kills}}/{{match.deaths}}/{{match.assists}}</td>
+					<td>{{match.networth}}</td>
+					<td>{{match.duration}}</td>
 				</tr>
 			</tbody>
 		</div>

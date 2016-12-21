@@ -42,4 +42,9 @@ export class Media {
     return this.http.get('./data/json/wiki/teamliquid.json')
             .map(res => res.json());
     }
+
+    getMatches() {
+    return this.http.get('./data/json/matches/dotaMatches.json')
+            .map(res => res.json());
+    }
 }
