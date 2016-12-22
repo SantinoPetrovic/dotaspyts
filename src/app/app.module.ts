@@ -26,6 +26,7 @@ import { SearchBox } from './search-box';
 import { PlayerBoxComponent } from './player-box';
 import { SearchPipe } from './search.pipe';
 import { PlayerFilterPipe } from './filter.pipe';
+import { OrderByPipe } from './orderby.pipe';
 import { XLarge } from './home/x-large';
 
 // Application wide providers
@@ -58,6 +59,7 @@ type StoreType = {
     PlayerBoxComponent,
     SearchPipe,
     PlayerFilterPipe,
+    OrderByPipe,
     XLarge
   ],
   imports: [ // import Angular's modules
