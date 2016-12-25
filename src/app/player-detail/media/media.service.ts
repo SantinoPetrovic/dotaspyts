@@ -47,4 +47,9 @@ export class Media {
     return this.http.get('./data/json/matches/dotaMatches.json')
             .map(res => res.json());
     }
+
+    getRedditNews() {
+    return this.http.get('./data/json/reddit/redditNews.json')
+            .map(res => res.json());
+    }
 }

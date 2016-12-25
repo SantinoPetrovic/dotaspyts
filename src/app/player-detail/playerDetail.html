@@ -62,72 +62,16 @@
 		<div class="grid-item grid-item-1 space">
 		<h1 class="headerText">Reddit</h1>
 		<ul class="listContent">
-			<li class="list">
+			<li *ngFor="let redditnews of this.redditNewsData | filter: productID" class="list">
 				<a class="listLink" href="/">
 					<div class="listText">
 						<span>
-							Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
+							{{redditnews.title}}
 						</span>
 					</div>
 					<div class="underListText">
 						<span>
-							10 hours ago
-						</span>
-					</div>
-				</a>
-			</li>
-			<li class="list">
-				<a class="listLink" href="/">
-					<div class="listText">
-						<span>
-							Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
-						</span>
-					</div>
-					<div class="underListText">
-						<span>
-							10 hours ago
-						</span>
-					</div>
-				</a>
-			</li>
-			<li class="list">
-				<a class="listLink" href="/">
-					<div class="listText">
-						<span>
-							Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
-						</span>
-					</div>
-					<div class="underListText">
-						<span>
-							10 hours ago
-						</span>
-					</div>
-				</a>
-			</li>
-			<li class="list">
-				<a class="listLink" href="/">
-					<div class="listText">
-						<span>
-							Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
-						</span>
-					</div>
-					<div class="underListText">
-						<span>
-							10 hours ago
-						</span>
-					</div>
-				</a>
-			</li>
-			<li class="list">
-				<a class="listLink" href="/">
-					<div class="listText">
-						<span>
-							Anybody else hate how the Tipping Menu blocks the chat at the end of the game and you cannot send what you're typing?
-						</span>
-					</div>
-					<div class="underListText">
-						<span>
-							10 hours ago
+							{{redditnews.timestamp * 1000 | date}}
 						</span>
 					</div>
 				</a>

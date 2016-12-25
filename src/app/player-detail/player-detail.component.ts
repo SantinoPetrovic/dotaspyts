@@ -19,6 +19,7 @@ export class PlayerDetailComponent {
   public data: Array<any> =[];
   public wikiData: Array<any> =[];
   public matchesData: Array<any> =[];
+  public redditNewsData: Array<any> =[];
   localState = { value: '' };
   productID: string;
   trustedDashboardUrl : SafeUrl;
@@ -52,6 +53,11 @@ export class PlayerDetailComponent {
     this.media.getMatches().subscribe(matches => { 
       this.matches = matches; 
       [].push.apply(this.matchesData, matches);
+    });
+    this.media.getRedditNews().subscribe(redditnews => { 
+      this.redditnews = redditnews; 
+      [].push.apply(this.redditNewsData, redditnews);
+      console.log("this.redditNewsData: ", this.redditNewsData);
     });
   }
   ngAfterViewInit () {
