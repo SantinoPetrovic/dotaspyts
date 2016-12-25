@@ -14,5 +14,7 @@ export class PlayerFilterPipe implements PipeTransform {
         return value.filter(player => player.id == productID);
         return value.filter(wiki => wiki.id == productID);
         return value.filter(match => match.id == productID);
+        return value.filter(redditNewsData => redditNewsData.id == productID);
+        return value.filter(gosugamersnews => gosugamersnews.id == productID);
     }
 }
