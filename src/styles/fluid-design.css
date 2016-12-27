@@ -115,6 +115,7 @@
 }
 .grid-item tbody .latestMatchResult:hover {
   background-color: #f1f1f1;
+  cursor: pointer;
 }
 .grid-item .headerText {
   margin-top: 12px;

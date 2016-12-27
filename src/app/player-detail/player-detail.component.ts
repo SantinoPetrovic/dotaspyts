@@ -92,5 +92,9 @@ export class PlayerDetailComponent {
           (document,"script","facebook-jssdk");
 
   }
+
+  onClick(event) {
+    window.location.href = "https://www.dotabuff.com/matches/"+event.currentTarget.id;
+  }
 }
  

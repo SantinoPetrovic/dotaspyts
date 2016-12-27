@@ -40,7 +40,7 @@
 					<th class="heroCategoryNetworth">Networth</th>
 					<th class="heroCategoryTime">Duration</th>
 				</tr>
-				<tr *ngFor="let match of this.matchesData | filter: productID" class="latestMatchResult">
+				<tr *ngFor="let match of this.matchesData | filter: productID" class="latestMatchResult" (click)="onClick($event)" id="{{match.matchID}}">
 					<td><img class="heroImage" src="./data/images/heroes_images_small/{{match.hero}}.png" title="{{match.localized_hero}}"></td>
 					<td *ngIf=" match.radiant_win == 'true' && match.team == 'Radiant' " class="won">Won Match</td>
 					<td *ngIf=" match.radiant_win == 'false' && match.team == 'Dire' " class="won">Won Match</td>
