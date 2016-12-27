@@ -63,7 +63,7 @@
 		<h1 class="headerText">Reddit</h1>
 		<ul class="listContent">
 			<li *ngFor="let redditnews of this.redditNewsData | filter: productID" class="list">
-				<a class="listLink" href="/">
+				<a class="listLink" href="https://www.reddit.com{{redditnews.url}}">
 					<div class="listText">
 						<span>
 							{{redditnews.title}}
@@ -82,7 +82,7 @@
 		<h1 class="headerText">Gosugamers</h1>
 		<ul class="listContent">
 			<li  *ngFor="let gosugamersnews of this.gosugamersNewsData | filter: productID" class="list">
-				<a class="listLink" href="/">
+				<a class="listLink" href="{{gosugamersnews.url}}">
 					<div class="listText">
 						<span>
 							{{gosugamersnews.title}}

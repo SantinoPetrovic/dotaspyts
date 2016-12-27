@@ -54,7 +54,7 @@ export class Media {
     }
 
     getGosugamersNews() {
-    return this.http.get('./data/json/reddit/redditNews.json')
+    return this.http.get('./data/json/gosugamers/gosugamersNews.json')
             .map(res => res.json());
     }
 }
