@@ -57,4 +57,9 @@ export class Media {
     return this.http.get('./data/json/gosugamers/gosugamersNews.json')
             .map(res => res.json());
     }
+
+    getTournaments() {
+    return this.http.get('./data/json/tournaments/tournaments.json')
+            .map(res => res.json());
+    }
 }

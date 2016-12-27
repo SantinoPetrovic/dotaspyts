@@ -21,6 +21,7 @@ export class PlayerDetailComponent {
   public matchesData: Array<any> =[];
   public redditNewsData: Array<any> =[];
   public gosugamersNewsData: Array<any> =[];
+  public tournamentsData: Array<any> =[];
   localState = { value: '' };
   productID: string;
   trustedDashboardUrl : SafeUrl;
@@ -62,6 +63,10 @@ export class PlayerDetailComponent {
     this.media.getGosugamersNews().subscribe(gosugamersnews => { 
       this.gosugamersnews = gosugamersnews; 
       [].push.apply(this.gosugamersNewsData, gosugamersnews);
+    });
+    this.media.getTournaments().subscribe(tournaments => { 
+      this.tournaments = tournaments; 
+      [].push.apply(this.tournamentsData, tournaments);
     });
   }
   ngAfterViewInit () {

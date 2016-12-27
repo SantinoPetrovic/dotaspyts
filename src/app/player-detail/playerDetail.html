@@ -113,7 +113,22 @@
 
 		<div class="grid-item grid-item-1 space">
 			<h1 class="headerText">Tournaments</h1>
-			
+			<ul class="listContent">
+				<li  *ngFor="let tournament of this.tournamentsData | filter: productID" class="list">
+					<a class="listLink" href="{{tournament.url}}">
+						<div class="listText">
+							<span>
+								{{tournament.name}}
+							</span>
+						</div>
+	<!-- 					<div class="underListText">
+							<span>
+								10 hours ago
+							</span>
+						</div> -->
+					</a>
+				</li>
+			</ul>			
 		</div>
 	</div>
 </div>
