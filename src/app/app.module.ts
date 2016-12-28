@@ -16,10 +16,6 @@ import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
-import { AboutComponent } from './about';
-import { PlayerComponent } from './player';
-import { PlayerListComponent } from './player-list';
-import { PlayerCreatorComponent } from './player-creator';
 import { PlayerDetailComponent } from './player-detail';
 import { NoContentComponent } from './no-content';
 import { SearchBox } from './search-box';
@@ -48,11 +44,7 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    AboutComponent,
     HomeComponent,
-    PlayerComponent,
-    PlayerListComponent,
-    PlayerCreatorComponent,
     PlayerDetailComponent,
     NoContentComponent,
     SearchBox,
