@@ -22,6 +22,7 @@
 .grid-item-1 {
   width: 230px;
   height: 320px;
+  cursor: pointer;
 }
 .grid-item {
   float: left;

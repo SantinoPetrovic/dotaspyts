@@ -1,6 +1,6 @@
 <div class="grid">
-	<div class="grid-item grid-item-1 space" *ngFor="let item of this.data | search : term">
-		<a class="listLink" href="/#/player/{{item.id}}">
+	<div class="grid-item grid-item-1 space playerBox" *ngFor="let item of this.data | search : term">
+		<a class="listLink" (click)="listClick($event)" id="{{item.id}}">
 			<div class="playerImage">
 				<img src="./data/images/players/{{item.list_image_url}}">
 			</div>

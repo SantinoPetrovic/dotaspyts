@@ -28,9 +28,9 @@ export class PlayerBoxComponent {
       this.players = players; 
       [].push.apply(this.data, players);
     });
-    /*console.log(this.data.length);*/
-/*    for (var key in this.data) {
-       var arr = data[key];
-    }*/
+  }
+  listClick(event) {
+    window.location = "http://localhost:3000/#/player/"+event.currentTarget.id;
+    location.reload();
   }
 }

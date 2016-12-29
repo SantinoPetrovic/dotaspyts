@@ -74,7 +74,7 @@ export class PlayerDetailComponent {
   }
 
   // Get scripts from Facebook and Twitter.
-  ngAfterViewInit () {
+  ngAfterViewChecked () {
     !function(d,s,id){
         var js: any,
             fjs=d.getElementsByTagName(s)[0],
